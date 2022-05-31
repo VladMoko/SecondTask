@@ -1,24 +1,25 @@
 package digit;
 
 public class Digits {
-
-    int dig = 12345;
-    int digOne = 12345;
-    int sum;
-    int sumOne;
-
-    public int getSum() {
+    //first point
+    public static int getSum(int dig) {
+        //counter
+        int sum = 0;
+        // Checking a value for !zero
         while (dig != 0) {
-            sum += dig % 10;
-            dig /= 10;
+            sum += dig % 10; //5
+            dig /= 10;//1234
+
         }
-        return sum;
+        return sum; // must be fifteen
     }
-    public int getDig(){
-        sumOne = String.valueOf(digOne)
-                .chars()
-                .map(Character::getNumericValue)
-                .sum();
-        return sumOne;
+    //second point
+    public static int getDig(int digOne){
+        //pass number to string
+        int sumOne = String.valueOf(digOne)
+                .chars() //make a chars from string
+                .map(Character::getNumericValue)//Search digit in chars
+                .sum();//sum of digits
+        return sumOne; // result
     }
 }
